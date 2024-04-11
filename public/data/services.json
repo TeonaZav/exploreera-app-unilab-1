@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "imagePath": "/images/discover/discover-1.png",
+    "description": "book memorable journey with our flight booking services! we're thrilled to present you flight options to suit your travel needs.",
+    "serviceName": "Book Flight"
+  },
+  {
+    "id": 2,
+    "imagePath": "/images/discover/discover-2.png",
+    "description": "book memorable journey with our flight booking services! we're thrilled to present you flight options to suit your travel needs.",
+    "serviceName": "Book Hotels"
+  },
+  {
+    "id": 3,
+    "imagePath": "/images/discover/discover-3.png",
+    "description": "book memorable journey with our flight booking services! we're thrilled to present you flight options to suit your travel needs.",
+    "serviceName": "Book Cruises"
+  },
+  {
+    "id": 4,
+    "imagePath": "/images/discover/discover-4.png",
+    "description": "book memorable journey with our flight booking services! we're thrilled to present you flight options to suit your travel needs.",
+    "serviceName": "Book family Vacation"
+  },
+  {
+    "id": 5,
+    "imagePath": "/images/discover/discover-5.jpeg",
+    "description": "Explore car rental services for your next adventure. Convenient pick-up locations and flexible rental periods.",
+    "serviceName": "Car Rental"
+  },
+  {
+    "id": 6,
+    "imagePath": "/images/discover/discover-6.jpeg",
+    "description": "Immerse yourself in culture with our art and museum tours. Explore history, art, and more.",
+    "serviceName": "Art & Museum Tours"
+  },
+  {
+    "id": 7,
+    "imagePath": "/images/discover/discover-7.jpeg",
+    "description": "Experience the wilderness like never before with our curated camping trips. Perfect for families and solo travelers.",
+    "serviceName": "Camping Trips"
+  },
+  {
+    "id": 8,
+    "imagePath": "/images/discover/discover-8.jpeg",
+    "description": "Join culinary tours and cooking classes to taste and learn about local cuisines from around the world.",
+    "serviceName": "Culinary Tours"
+  },
+  {
+    "id": 9,
+    "imagePath": "/images/discover/discover-9.jpeg",
+    "description": "Relax and rejuvenate with our wellness and spa packages. From thermal baths to massages, find your perfect retreat.",
+    "serviceName": "Wellness & Spa"
+  },
+  {
+    "id": 10,
+    "imagePath": "/images/discover/discover-10.jpeg",
+    "description": "Embark on guided tours to explore breathtaking destinations. Learn from local experts.",
+    "serviceName": "Guided Tours"
+  },
+  {
+    "id": 11,
+    "imagePath": "/images/discover/discover-11.jpeg",
+    "description": "Get ready for adventure with our hiking and trekking tours. Explore mountains, forests, and trails with expert guides.",
+    "serviceName": "Hiking & Trekking"
+  },
+  {
+    "id": 12,
+    "imagePath": "/images/discover/discover-12.jpeg",
+    "description": "Experience the thrill of safari tours. Get up close with wildlife in their natural habitats.",
+    "serviceName": "Safari Tours"
+  }
+]

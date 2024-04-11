@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "imagePath": "/images/popular/popular-1.png",
+    "destination": "Barcelona, Spain",
+    "price": 2400,
+    "per": "2 adults, 7 days"
+  },
+  {
+    "id": 2,
+    "imagePath": "/images/popular/popular-2.png",
+    "destination": "Rome, Italy",
+    "price": 1800,
+    "per": "2 adults, 3 days"
+  },
+  {
+    "id": 3,
+    "imagePath": "/images/popular/popular-3.png",
+    "destination": "Paris, France",
+    "price": 2100,
+    "per": "2 adults, 4 days"
+  },
+  {
+    "id": 4,
+    "imagePath": "/images/popular/popular-4.png",
+    "destination": "Luxor City, Egypt",
+    "price": 800,
+    "per": "2 adults, 3 days"
+  },
+  {
+    "id": 5,
+    "imagePath": "/images/popular/popular-1.png",
+    "destination": "Barcelona, Spain",
+    "price": 2400,
+    "per": "2 adults, 7 days"
+  },
+  {
+    "id": 6,
+    "imagePath": "/images/popular/popular-2.png",
+    "destination": "Rome, Italy",
+    "price": 1800,
+    "per": "2 adults, 3 days"
+  },
+  {
+    "id": 7,
+    "imagePath": "/images/popular/popular-3.png",
+    "destination": "Paris, France",
+    "price": 2100,
+    "per": "2 adults, 4 days"
+  },
+  {
+    "id": 8,
+    "imagePath": "/images/popular/popular-4.png",
+    "destination": "Luxor City, Egypt",
+    "price": 800,
+    "per": "2 adults, 3 days"
+  },
+  {
+    "id": 9,
+    "imagePath": "/images/popular/popular-1.png",
+    "destination": "Barcelona, Spain",
+    "price": 2400,
+    "per": "2 adults, 7 days"
+  },
+  {
+    "id": 10,
+    "imagePath": "/images/popular/popular-2.png",
+    "destination": "Rome, Italy",
+    "price": 1800,
+    "per": "2 adults, 3 days"
+  },
+  {
+    "id": 11,
+    "imagePath": "/images/popular/popular-3.png",
+    "destination": "Paris, France",
+    "price": 2100,
+    "per": "2 adults, 4 days"
+  },
+  {
+    "id": 12,
+    "imagePath": "/images/popular/popular-4.png",
+    "destination": "Luxor City, Egypt",
+    "per": "2 adults, 3 days",
+    "price": 800
+  }
+]

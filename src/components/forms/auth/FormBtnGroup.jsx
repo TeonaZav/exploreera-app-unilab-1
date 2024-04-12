@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import FbIcon from "./../../../assets/fb-icon.png";
-import AppleIcon from "./../../../assets/gmail-icon.png";
-import GoogleIcon from "./../../../assets/gmail-icon.png";
+import AppleIcon from "./../../../assets/apple-icon.png";
+import GoogleIcon from "./../../../assets/google-icon.png";
 import GmailIcon from "./../../../assets/gmail-icon.png";
 
 function FormBtnGroup() {

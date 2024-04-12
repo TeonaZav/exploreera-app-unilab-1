@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faSignature, faUser } from "@fortawesome/free-solid-svg-icons";
 
 import { useAuth } from "./../../context/AuthContext";
 
@@ -26,6 +26,7 @@ const Header = () => {
   const { isAuthenticated, logout, user } = useAuth();
 
   useEffect(() => {
+    console.log(user);
     const handleScroll = () => {
       const offset = window.scrollY;
       setIsScrolled(offset > 20);
@@ -35,7 +36,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [user]);
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
@@ -63,19 +64,21 @@ const Header = () => {
               {link.name}
             </StyledLink>
           ))}
-          {isAuthenticated && (
-            <StyledUserImageButton
-              className="dropdown-toggle"
-              onClick={toggleDropdown}
-              color={color}
-            >
-              {isAuthenticated ? (
-                "Logout"
-              ) : (
-                <FontAwesomeIcon icon={faUser} className="icon" />
-              )}
-            </StyledUserImageButton>
-          )}
+
+          <StyledUserImageButton
+            className="dropdown-toggle"
+            onClick={toggleDropdown}
+            color={color}
+          >
+            {user?.userImage ? (
+              <img
+                src={`data:image/png;base64,${user.userImage}`}
+                alt="user avatar"
+              />
+            ) : (
+              <FontAwesomeIcon icon={faUser} className="icon" />
+            )}
+          </StyledUserImageButton>
         </StyledNav>
         <StyledBurgenButton onClick={toggleDropdown}>
           <FontAwesomeIcon icon={faBars} size="xl" color={color} />
@@ -88,6 +91,9 @@ const Header = () => {
 };
 
 const StyledHeader = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -95,9 +101,7 @@ const StyledHeader = styled.header`
   width: 100vw;
   color: ${(props) => props.color};
   background-color: ${(props) => props.$bg};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   padding: 0 4.5rem;
   height: 4.8rem;
 
@@ -124,10 +128,15 @@ const StyledLink = styled.a`
 `;
 
 const StyledNavCt = styled.div`
+  height: 100%;
   display: flex;
+  align-items: center;
   gap: 1rem;
 `;
 const StyledNav = styled.nav`
+  height: 100%;
+  display: flex;
+  align-items: center;
   gap: 4rem;
   font-size: 2.8rem;
   line-height: 3.2rem;
@@ -150,10 +159,22 @@ const StyledBurgenButton = styled.button`
 `;
 
 const StyledUserImageButton = styled.button`
-  background-color: red;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 10rem;
+  border-radius: 100%;
+  background-color: transparent;
+  overflow: hidden;
   padding: 0 1rem;
   border: none;
   transition: all 0.3s ease-in-out;
+  img {
+    width: 10rem;
+    height: 100%;
+    object-fit: cover;
+  }
   .icon {
     color: ${(props) => props.color};
   }

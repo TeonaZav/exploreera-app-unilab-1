@@ -20,7 +20,9 @@ const DropdownMenu = ({ isOpen, handleLogout }) => {
           {isAuthenticated ? (
             <StyledDropMenu>
               <li>
-                <button onClick={handleLogout}>Logout</button>
+                <button onClick={handleLogout} className="btn-logout">
+                  Logout
+                </button>
               </li>
             </StyledDropMenu>
           ) : (
@@ -63,24 +65,32 @@ const StyledDropMenu = styled.div`
   background-color: #ffffff;
   padding: 1rem;
   border-radius: 1rem;
+
   ul {
     &:not(:last-of-type) {
       border-bottom: 1px solid #424244;
     }
-    li {
-      padding-block: 1rem;
-
-      a,
-      a:visited {
-        color: #424244;
-        transition: all 0.3s ease-in-out;
-      }
-      a:hover {
-        color: #ff6700;
-      }
-    }
   }
 
+  li {
+    padding-block: 1rem;
+    list-style: none;
+    a,
+    a:visited {
+      color: #424244;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover,
+    a:hover {
+      color: #ff6700;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+    }
+  }
   @media (min-width: 90em) {
     width: 24.7rem;
   }
@@ -90,10 +100,10 @@ const StyledDropMenu = styled.div`
       &:not(:last-of-type) {
         border-bottom: none;
       }
-      li {
-        &:not(:last-of-type) {
-          border-bottom: 1px solid #ff6700;
-        }
+    }
+    li {
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #ff6700;
       }
     }
     .dropdown-links {

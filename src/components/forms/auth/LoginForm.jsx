@@ -1,24 +1,31 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
+
 import toast, { Toaster } from "react-hot-toast";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faCheck } from "@fortawesome/free-solid-svg-icons";
+
 import { loginValidationSchema } from "./Schema";
+
+import { useModal } from "../../../context/ModalContext";
+import { useAuth } from "../../../context/AuthContext";
+
 import FormField from "../FormField";
 import Button from "../../UI/Button";
 import Modal from "../../UI/Modal";
 import ModalContent from "./ModalContent";
+import FormBtnGroup from "./FormBtnGroup";
+
 import {
   Input,
   StyledLoginCt,
   StyledForm,
   PrivacyPolicy,
 } from "./styles/SharedFormStyles";
-import FormBtnGroup from "./FormBtnGroup";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { useModal } from "../../../context/ModalContext";
-import { useAuth } from "../../../context/AuthContext";
+
+import { getUserByEmail } from "../../../utils/helpers";
 
 const LoginForm = () => {
   const { isOpen, openModal, closeModal } = useModal();
@@ -48,8 +55,19 @@ const LoginForm = () => {
 
   const onSubmit = (data) => {
     const { userEmail, userPassword } = data;
-    login(userEmail, userPassword);
+    const user = getUserByEmail(userEmail);
     toast.success("User logged in.");
+
+    if (user) {
+      if (user.userPassword === userPassword) {
+        login(user);
+        toast.success("User logged in successfully.");
+      } else {
+        toast.error("Incorrect email or password.");
+      }
+    } else {
+      toast.error("No account found with that email.");
+    }
   };
 
   useEffect(() => {
@@ -105,7 +123,7 @@ const LoginForm = () => {
             </Button>
           ) : (
             <Button type="button" height="5rem" onClick={openModal}>
-              Continue
+              Continue <FontAwesomeIcon icon={faArrowRight} className="icon" />
             </Button>
           )}
         </StyledForm>

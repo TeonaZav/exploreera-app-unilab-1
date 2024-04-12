@@ -1,8 +1,8 @@
-import React, { createContext, useContext, useEffect, useReducer } from "react";
+import React, { createContext, useContext, useReducer } from "react";
 
 const AuthContext = createContext();
 
-const initialState = { user: null, isAuthenticated: false };
+const initialState = { user: null, isAuthenticated: false, image: null };
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -15,24 +15,14 @@ const reducer = (state, action) => {
   }
 };
 
-const FAKE_USER = {
-  userName: "Teona",
-  userEmail: "te@gmail.com",
-  userPassword: "123123",
-  userImage:
-    "https://cdn.pixabay.com/photo/2014/04/02/17/07/user-307993_640.png",
-};
-
 export const AuthProvider = ({ children }) => {
-  const [{ user, isAuthenticated }, dispatch] = useReducer(
+  const [{ user, isAuthenticated, image }, dispatch] = useReducer(
     reducer,
     initialState
   );
 
-  function login(email, password) {
-    if (email === FAKE_USER.userEmail && password === FAKE_USER.userPassword) {
-      dispatch({ type: "login", payload: FAKE_USER });
-    }
+  function login(user) {
+    dispatch({ type: "login", payload: user });
   }
 
   function logout() {

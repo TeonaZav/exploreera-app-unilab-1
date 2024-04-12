@@ -51,3 +51,9 @@ export function addUser(userData) {
   localStorage.setItem("usersData", JSON.stringify(users));
   return { success: true, message: "User signed up successfully." };
 }
+
+export const getUserByEmail = (email) => {
+  const usersJson = localStorage.getItem("usersData");
+  const users = usersJson ? JSON.parse(usersJson) : [];
+  return users.find((user) => user.userEmail === email);
+};

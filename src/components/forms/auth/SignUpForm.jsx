@@ -1,26 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+// Libraries
 import styled from "styled-components";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import toast, { Toaster } from "react-hot-toast";
-import { signUpValidationSchema } from "./Schema";
-import FormField from "../FormField";
-import Button from "../../UI/Button";
-import Modal from "../../UI/Modal";
-import ModalContent from "./ModalContent";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 import {
   Input,
   StyledLoginCt,
   StyledForm,
   PrivacyPolicy,
 } from "./styles/SharedFormStyles";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { useModal } from "../../../context/ModalContext";
-import FormBtnGroup from "./FormBtnGroup";
 import ImageIcon from "./../../../assets/photo-icon.png";
+
+import FormField from "../FormField";
+import Button from "../../UI/Button";
+import Modal from "../../UI/Modal";
+import ModalContent from "./ModalContent";
+import FormBtnGroup from "./FormBtnGroup";
+import { useModal } from "../../../context/ModalContext";
+import { signUpValidationSchema } from "./Schema";
+import { base64Image, addUser } from "../../../utils/helpers";
 
 const SignUpForm = () => {
   const { isOpen, openModal, closeModal } = useModal();
@@ -32,40 +35,49 @@ const SignUpForm = () => {
   };
 
   const methods = useForm({
-    mode: "onChange",
+    mode: "onBlur",
     resolver: yupResolver(signUpValidationSchema),
   });
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, touchedFields },
     watch,
     setValue,
   } = methods;
 
   const onSubmit = (data) => {
-    toast.success(toast.success.message || "User logged in.");
     console.log(data);
+    const newUser = {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      userEmail: data.userEmail,
+      userPassword: data.userPassword,
+      userImage:
+        typeof data.userImage === "string" ? data.userImage : undefined,
+    };
 
-    const formData = new FormData();
-    formData.append("firstName", data.firstName);
-    formData.append("lastName", data.lastName);
-    formData.append("userEmail", data.userEmail);
-    formData.append("userPassword", data.userPassword);
-    formData.append("userImage", data.userImage[0]);
-
-    const jsonFormData = JSON.stringify(Object.fromEntries(formData));
-    localStorage.setItem("userDataTeona", jsonFormData);
+    const result = addUser(newUser);
+    if (result.success) {
+      toast.success(result.message);
+    } else {
+      toast.error(result.message);
+    }
   };
 
   const onError = (errors) => {
     console.log(errors);
-    toast.error(toast.error.message || "Invalid login attempt");
+    toast.error(toast.error.message || "something went wrong");
   };
 
   const onFileChange = (event) => {
-    setValue("userImage", event.target.files[0]);
+    const file = event.target.files[0];
+    if (file) {
+      base64Image(file, (base64) => {
+        setValue("userImage", base64);
+      });
+    }
   };
 
   const userImage = watch("userImage");
@@ -90,7 +102,9 @@ const SignUpForm = () => {
           <FormField
             id="firstName"
             label="First Name"
-            error={errors?.firstName?.message?.toString()}
+            error={
+              touchedFields.lastName && errors?.firstName?.message?.toString()
+            }
           >
             <Input
               type="text"
@@ -148,7 +162,11 @@ const SignUpForm = () => {
           </FormField>
           <CustomFileUpload htmlFor="file-upload">
             {userImage ? (
-              <img src={URL.createObjectURL(userImage)} alt="image preview" />
+              <img
+                src={`data:image/png;base64,${userImage}`}
+                alt="image preview"
+                className="user-image"
+              />
             ) : (
               <img src={ImageIcon} alt="Image Icon" />
             )}
@@ -166,7 +184,7 @@ const SignUpForm = () => {
             </Button>
           ) : (
             <Button type="button" height="5rem" onClick={openModal}>
-              Continue
+              Continue <FontAwesomeIcon icon={faArrowRight} className="icon" />
             </Button>
           )}
         </StyledForm>
@@ -200,21 +218,18 @@ const CustomFileUpload = styled.label`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  cursor: pointer;
+
   background-color: #e6ebff;
   border-radius: 100%;
   width: 10rem;
   height: 10rem;
-  background-size: cover;
-  background-position: center;
-  font-family: Arial, sans-serif;
-  color: #000;
   overflow: hidden;
+  cursor: pointer;
 
-  &::after {
-    content: "";
-    display: ${({ imageUploaded }) => (imageUploaded ? "none" : "block")};
+  & .user-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 export default SignUpForm;

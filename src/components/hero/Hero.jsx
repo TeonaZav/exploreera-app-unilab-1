@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 
 const heroVariants = {
   hidden: { opacity: 0.5, scale: 1 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
 };
 
 const Hero = () => {

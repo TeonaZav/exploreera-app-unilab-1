@@ -1,7 +1,7 @@
 # Unilab Challenge
 
 
-დედლაინის ვადის გასვილის გამო, ქომითების ნაწილი არის სხვა რეპოზოტორიში:
+ქომითების ნაწილი არის სხვა რეპოზოტორიში:
 https://github.com/TeonaZav/exploreera-app-unilab
 
 ## Built with
@@ -14,6 +14,6 @@ https://github.com/TeonaZav/exploreera-app-unilab
 - mui Rage slider
 - react-select
 
-## LIVE URL
+## Current LIVE URL
 
-- https://exploreera-app-unilab.vercel.app/
+- https://exploreera-app-unilab-1.vercel.app/

@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+
 import styled from "styled-components";
-import Logo from "../UI/Logo";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
+
+import { useAuth } from "./../../context/AuthContext";
+
+import Logo from "../UI/Logo";
 import DropdownMenu from "../UI/DropdownNav";
 
 const links = [
@@ -17,6 +22,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { isAuthenticated, logout, user } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,29 +35,54 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, []);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+
+  const handleLogout = () => {
+    logout();
+    setIsDropdownOpen(false);
+  };
+
   const color = isHomePage && !isScrolled ? "#ffffff" : "#424244";
   const bg = isHomePage && !isScrolled ? "transparent" : "#EAE9E9";
 
   return (
     <StyledHeader $bg={bg}>
       <Logo color={color} />
-      <StyledNav>
-        {links.map((link, index) => (
-          <StyledLink
-            href={link.hash}
-            key={`${index}_${link.name}`}
-            color={color}
-          >
-            {link.name}
-          </StyledLink>
-        ))}
-        <DropdownMenu />
-      </StyledNav>
+      <StyledNavCt>
+        <StyledNav>
+          {links.map((link, index) => (
+            <StyledLink
+              href={link.hash}
+              key={`${index}_${link.name}`}
+              color={color}
+            >
+              {link.name}
+            </StyledLink>
+          ))}
+          {isAuthenticated && (
+            <StyledUserImageButton
+              className="dropdown-toggle"
+              onClick={toggleDropdown}
+              color={color}
+            >
+              {isAuthenticated ? (
+                "Logout"
+              ) : (
+                <FontAwesomeIcon icon={faUser} className="icon" />
+              )}
+            </StyledUserImageButton>
+          )}
+        </StyledNav>
+        <StyledBurgenButton onClick={toggleDropdown}>
+          <FontAwesomeIcon icon={faBars} size="xl" color={color} />
+        </StyledBurgenButton>
 
-      <StyledBurgenButton>
-        <FontAwesomeIcon icon={faBars} size="xl" color={color} />
-      </StyledBurgenButton>
+        <DropdownMenu isOpen={isDropdownOpen} handleLogout={handleLogout} />
+      </StyledNavCt>
     </StyledHeader>
   );
 };
@@ -68,7 +100,6 @@ const StyledHeader = styled.header`
   align-items: center;
   padding: 0 4.5rem;
   height: 4.8rem;
-  transition: all 0.5s ease-in-out;
 
   @media (min-width: 50em) {
     padding: 0 4rem;
@@ -92,6 +123,10 @@ const StyledLink = styled.a`
   }
 `;
 
+const StyledNavCt = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
 const StyledNav = styled.nav`
   gap: 4rem;
   font-size: 2.8rem;
@@ -111,6 +146,21 @@ const StyledBurgenButton = styled.button`
 
   @media (min-width: 90em) {
     display: none;
+  }
+`;
+
+const StyledUserImageButton = styled.button`
+  background-color: red;
+  padding: 0 1rem;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  .icon {
+    color: ${(props) => props.color};
+  }
+  &&:hover {
+    .icon {
+      color: #c85100;
+    }
   }
 `;
 export default Header;

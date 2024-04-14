@@ -15,7 +15,6 @@ const FilterForm = () => {
 
   const handleDateChange = (event) => {
     setSelectedDate(event.target.value);
-    // updateFlightDate(event.target.value);
   };
 
   const handleSubmit = (e) => {

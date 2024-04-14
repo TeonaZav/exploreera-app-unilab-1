@@ -1,8 +1,11 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import Lottie from "lottie-react";
+
 import GlobalStyle from "./GlobalStyle";
 import { ModalProvider } from "./context/ModalContext";
 import { AuthProvider } from "./context/AuthContext";
+import loadingAnimation from "./assets/loader.json";
 
 import ProtectedRoute from "./components/forms/auth/PrivateRoute";
 const Home = lazy(() => import("./pages/Home"));
@@ -17,7 +20,18 @@ function App() {
       <GlobalStyle />
       <ModalProvider>
         <BrowserRouter>
-          <Suspense fallback={<>Loading...</>}>
+          <Suspense
+            fallback={
+              <>
+
+                <Lottie
+                  animationData={loadingAnimation}
+                  className="animation"
+                  style={{ height: 300 }}
+                />
+              </>
+            }
+          >
             <Routes>
               <Route index element={<Home />} />
               <Route path="/login" element={<Login />} />

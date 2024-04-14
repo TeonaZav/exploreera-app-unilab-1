@@ -23,10 +23,9 @@ const Header = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const { isAuthenticated, logout, user } = useAuth();
+  const { logout, user } = useAuth();
 
   useEffect(() => {
-    console.log(user);
     const handleScroll = () => {
       const offset = window.scrollY;
       setIsScrolled(offset > 20);
@@ -36,7 +35,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [user]);
+  }, []);
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);

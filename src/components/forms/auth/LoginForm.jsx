@@ -56,24 +56,23 @@ const LoginForm = () => {
   const onSubmit = (data) => {
     const { userEmail, userPassword } = data;
     const user = getUserByEmail(userEmail);
-    toast.success("User logged in.");
-
-    if (user) {
-      if (user.userPassword === userPassword) {
-        login(user);
-        toast.success("User logged in successfully.");
-      } else {
-        toast.error("Incorrect email or password.");
-      }
-    } else {
+    if (!user) {
       toast.error("No account found with that email.");
+      return;
+    }
+
+    if (user.userPassword === userPassword) {
+      login(user);
+      toast.success("User logged in successfully.");
+    } else {
+      toast.error("Incorrect email or password.");
     }
   };
 
   useEffect(() => {
     if (isAuthenticated) navigate("/flights", { replace: true });
     console.log(isAuthenticated);
-  }, [isAuthenticated, navigate]);
+  }, [isAuthenticated]);
 
   const onError = (errors) => {
     console.log(errors);

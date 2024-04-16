@@ -10,6 +10,7 @@ import loadingAnimation from "./assets/loader.json";
 import ProtectedRoute from "./components/forms/auth/PrivateRoute";
 const Home = lazy(() => import("./pages/Home"));
 const Flights = lazy(() => import("./pages/Flights"));
+const Stays = lazy(() => import("./pages/Stays"));
 const Login = lazy(() => import("./pages/Login"));
 const SignUp = lazy(() => import("./pages/SignUp"));
 const PageNotFound = lazy(() => import("./pages/PageNotFount"));
@@ -23,7 +24,6 @@ function App() {
           <Suspense
             fallback={
               <>
-
                 <Lottie
                   animationData={loadingAnimation}
                   className="animation"
@@ -45,7 +45,14 @@ function App() {
                 }
               />
               <Route index element={<Navigate to="/flights" replace />} />
-
+              <Route
+                path="/stays"
+                element={
+                  <ProtectedRoute>
+                    <Stays />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </Suspense>

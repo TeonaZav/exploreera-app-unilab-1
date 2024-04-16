@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "name": "Baike Boutique Hotel",
+    "location": {
+      "address": "Ping'an Village, Longji , 541701 Longsheng",
+      "city": "Longji",
+      "country": "China"
+    },
+    "price": 120,
+    "rating": 4,
+    "amenities": ["Free Wi-Fi", "Swimming Pool", "Spa", "Restaurant"],
+    "images": [
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/453486640.jpg?k=392429a3c7ac9729b9e18e2614752e4e1413a534c052e780f64e7539f65acbb9&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/139387061.jpg?k=59144f4caa7ef04719bab9a48b3967b20a6c19194a874149885afc5c83c7334a&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/197854287.jpg?k=312c55763ba7de515d32720faaaa6abfd18a7161af52f22810bb80c47346af68&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/197854317.jpg?k=0108027232dc97534538e0910e30791c0500c91962c0c2446c703c35a29a16bc&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/139386962.jpg?k=c1fb5f8c8864d7953feb3e9bdcec73975d61d25ad9fb1e7b2feeecef52a938ae&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/197854209.jpg?k=eb50cf3f8638aee695a62d01eb4d73098bc6607a6b9427014f485429eac82227&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/197854224.jpg?k=6adc72aeae69290621b353c7c0314aa3f4aeb873b5f6c17c0c938b657f0e4a38&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/197854226.jpg?k=e69e7b24bd47221ded237b694cd0eb3694c31745472b390c4591e67a77a9d76d&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/197854277.jpg?k=710b12342ed468fc8eb02e7f4c7972d4aab2989ee4e5fdac345a943e560ca31b&o=&hp=1"
+    ],
+    "description": "Located just 7 km from Ping'an Rice Terrace, Baike Boutique Hotel features accommodation in Longsheng with access to a garden, a bar, as well as full-day security."
+  },
+  {
+    "id": 2,
+    "name": "Laojia, a Qing dynasty house",
+    "location": {
+      "address": "No. 35 Langshi Villiage, Yangdi, 541904 Xingping",
+      "city": "Xingping",
+      "country": "China"
+    },
+    "price": 100,
+    "rating": 4,
+
+    "amenities": [
+      "Beachfront",
+      "Outdoor Pool",
+      "3 Restaurants",
+      "Yoga Classes",
+      "Free Parking"
+    ],
+    "images": [
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/133915138.jpg?k=0a25f3dc01ae2c35a1985c2beb098e93f610e671a74ed3abf27b2aa8cb164990&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/133918006.jpg?k=b49310449f8310d70b37d88c2eabb2ee9acf89115525585c3ce33153432cca83&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/92611096.jpg?k=b6f59ff203f81562fd37c227c37572a7299c59f543ead958df6632c171608704&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/92611114.jpg?k=1cf84bd460554b449764998ddd2e2f29896d4bb18c8fe6d63562b8664a8e1ec6&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/92611099.jpg?k=8204449c576450605a0d7b5341ee9f0451c7bedf15a4e34ed14d8fc5d77105a3&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/133917119.jpg?k=f6ae2629411c4f4f228e2f0db58bf8bdcf09689be779498019499dcf43f3adbf&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/133915141.jpg?k=d01d0e56963015a155102843e7380492a45705d980ade49b3491e777a42e27a1&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/133915093.jpg?k=a830990ed54f88804138b8fcac462689a865876712b81479985e5e4752406fbf&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/133915134.jpg?k=03bb51c8573205051454f87d3a29887b7293fe7666df80af2366a176d59eeb34&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/133915137.jpg?k=bd5144319de835f339d188f7fb3fdd5f4878ff3ab2911b33c713d0697e2a418b&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/133917116.jpg?k=55447ab225d2428af029598225efefba81333cd53a6538927f7f913f7ba34a0a&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/133918002.jpg?k=a67d882ae2f4149615469eb301e1416accf7f4000fc889ac2731678cbc415abf&o=&hp=1"
+    ],
+    "description": "Situated in Xingping, 29 km from Nine Horses Mountain and 30 km from Nine Horses Mountain Resort, Laojia, a Qing dynasty house offers spacious air-conditioned accommodation with a patio and free WiFi."
+  },
+  {
+    "id": 3,
+    "name": "Elsewhere Hotel Leifu Branch Pingyao",
+    "location": {
+      "address": "No.1 Leijia Street ,Ximadao, 031100",
+      "city": "Pingyao",
+      "country": "China"
+    },
+    "price": 90,
+    "rating": 3,
+    "amenities": [
+      "Ski-in/Ski-out",
+      "Hot Tubs",
+      "Spa",
+      "Free Shuttle",
+      "Mountain Views"
+    ],
+    "images": [
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/227554136.jpg?k=17421b8ef8ef2dcb3344fbb61c22da9aed6928ef734ed3e8e026474f24391d22&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/105328461.jpg?k=052970654b6c54c5d319333c2746190e38365ae8bb71a7149e9a74631ebe1829&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/105328503.jpg?k=d9b810feed9259cb53001d9bea6cace1349bf80f1482e7ca6dc894760f12e488&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/105328510.jpg?k=cdd9b12de4d7f0af6c371274315a6681cfe4dc5078463d93f63fc4f8ceff0a98&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/105284477.jpg?k=c01206b99065ea0a62c6064d90a7d32ab4b161a8ed35c6f4d23f7967f27fed6e&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/105329408.jpg?k=e9a894c8bccbb449aa71d1f45638d424cd730dac50853373a173f3faccdbfb30&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/227556279.jpg?k=80efb9f679a02f3d08bba04ee13e8eae949f00982c714878f04f321d9ec62bb9&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/227556245.jpg?k=1ce093dab4058242113e6f0a5f5ee0e3a0ae5275d6782a836989f0ba20ab6087&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/227554341.jpg?k=85725a46cb3390434f7717a149f6e9432e41410e0e83a3cc6fb3d444a3aa8720&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/105328413.jpg?k=d5f176e74931854db4e54027a0aac49029e4949a174b1d33d6514ab00a220edb&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/227554129.jpg?k=b9dcfeac1a6a1cd6ff052cdd2bfb26871bec7e5bd158f1197e87b2bdc2823ec9&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/105329188.jpg?k=f5efe50f4ed2d5b522456e9b5af9acc4549c9f2148f0d76bc2325aa2f012241e&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/105329231.jpg?k=3c3b2035cf8d72a5d26e4413106946ed4866a7ec6e505202201e1699693a7a3f&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/105329308.jpg?k=284bb2ea0832c8be19f23dc944986087a5fd91d58ab3f47be16064081432485d&o=&hp=1"
+    ],
+    "description": "Attractively situated in the Pingyao Ancient City district of Pingyao, Elsewhere Hotel Leifu Branch Pingyao is situated 400 metres from Qingxu Guan, 700 metres from Ping Yao Temple of the City God and 700 metres from North First Escort. "
+  },
+  {
+    "id": 4,
+    "name": "Comfort Inn Victoria",
+    "location": {
+      "address": "18-24 Belgrave Road, Westminster Borough",
+      "city": "London",
+      "country": "United Kingdom"
+    },
+    "price": 160,
+    "rating": 4,
+    "amenities": ["Free Wi-Fi", "Swimming Pool", "Spa", "Restaurant"],
+    "images": [
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/367094798.jpg?k=45b40dad8490b053251e6e44b86fe21b23d7f47beb37c0b2082f2673c2fe7a0c&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/501069573.jpg?k=f44236b19dfcd1c8468aee77a3cf0c90863dc7af2d984e7b65f5971d8e1ccb2f&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/501069575.jpg?k=ea23628b6ecf13064c296fabf4d48893974a6e731bd9c3ce114bac74abd49e3c&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/501068526.jpg?k=ffb8f6f7feb4d0acd06522432ed73b589b92bb0241f4ee16302c5fb3b0e92f68&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/501067126.jpg?k=a0877a02b232b5fb4430053f5d75031937db14adc0fdbfc29ba27ae17b571896&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/501058363.jpg?k=deec8bfc3472ce682d84ebe8d3fc71a7918db5b516c9e5975e1b725dc19e4636&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/367094799.jpg?k=042f02878147f28d014b7bf405b1b1cb5789104b8262ba01f08bb3936bdb3f5b&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/367094804.jpg?k=9907992c30d569a4f825620a150bfd99496de5e7e69995e6713b4099d17e7418&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/367094805.jpg?k=4b30f875b8cc553c7662e448fe9d715f1806446c0bdf334334c1cd50b07d70db&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/453088140.jpg?k=a90255159563e96a5183029c66e9499ded94a13ba1a960e2caa156000436f258&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/453088142.jpg?k=763c563530837ef8eb24a6fa33a3f0dd4fbc04bceb6de75f50b93c9f2a8fcafe&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/453088141.jpg?k=c26dac213e2dbbafc1babf2a93871f839340bc6798c9f367d9335be30d0e76cd&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/453088194.jpg?k=0a16c84791479c4a6317ef2ba1b23e785514e256992beda80a5d15952f0ca69c&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/453088188.jpg?k=5a74ec317e923ac3e128b3bb09ef254e544689618c4c92e65a9c9dbc19db811b&o=&hp=1"
+    ],
+    "description": "Attractively located in the Westminster Borough district of London, 500 metres from Victoria Underground Station, 1.2 km from Buckingham Palace and 1.6 km from St James's Park."
+  },
+  {
+    "id": 5,
+    "name": "Oxford Street Fitzrovia Apartments",
+    "location": {
+      "address": "Camden, W1T 7PN",
+      "city": "London",
+      "country": "United Kingdom"
+    },
+    "price": 200,
+    "rating": 2,
+    "amenities": ["Free Wi-Fi", "Swimming Pool", "Spa", "Restaurant"],
+    "images": [
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/277756597.jpg?k=729ec191bf9617b0b62f99a9f25c089c16da86b416386be8d7a649a07dc6c695&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/463046792.jpg?k=6b53b481e85238ade6abf5ce6e1c1df0bd2f5b5ba8ae4e9edd7231cdeeab13d9&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/463046799.jpg?k=79afaabbf7809044968550d11427bead538a9e2929390945577effa6f35a1f86&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/463046801.jpg?k=8e28ea8ad26f9e8c9afa2e36417605414a49b27c4f973260c182bf48b8f03f6e&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/463046793.jpg?k=d09ae936c7daa3a663eb2078e7788c1951042b1b908b837d2bf3c72b9b4cb500&o=&hp=1"
+    ],
+    "description": "Oxford Street Fitzrovia Apartments is situated in the Camden district of London, 600 metres from British Museum, 1.3 km from Arts Theatre and 1.2 km from Oxford Circus."
+  },
+  {
+    "id": 6,
+    "name": "Piccolino Hyde Park Hotel",
+    "location": {
+      "address": "Piccolino Hyde Park Hotel",
+      "city": "London",
+      "country": "United Kingdom"
+    },
+    "price": 88,
+    "rating": 2.5,
+    "amenities": ["Free Wi-Fi", "Swimming Pool", "Spa", "Restaurant"],
+    "images": [
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/1481219.jpg?k=3b93108d151e74a9a694ed56868b37f5aa4ad77c97a5d04af84f95b27bec3a86&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/7130341.jpg?k=03f9966f845fd755ad8708b97ee623e998930038eec49dc4073fbfe4898215ca&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/463046799.jpg?k=79afaabbf7809044968550d11427bead538a9e2929390945577effa6f35a1f86&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/463046801.jpg?k=8e28ea8ad26f9e8c9afa2e36417605414a49b27c4f973260c182bf48b8f03f6e&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1280x900/463046793.jpg?k=d09ae936c7daa3a663eb2078e7788c1951042b1b908b837d2bf3c72b9b4cb500&o=&hp=1"
+    ],
+    "description": "Offering quiet street views, Piccolino Hyde Park Hotel is an accommodation situated in London, 1.7 km from The Serpentine and 1.8 km from Madame Tussauds. "
+  }
+]

@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const links = [{ path: "/flights", name: "Flights" }];
+const links = [
+  { path: "/flights", name: "Flights" },
+  { path: "/stays", name: "Stays" },
+];
 const PageNavContent = () => {
   return (
     <StyledList>

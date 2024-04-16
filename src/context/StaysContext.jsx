@@ -29,7 +29,7 @@ export const StaysProvider = ({ children }) => {
 
   const updateHotelStars = (star, isChecked) => {
     setSelectedStars((prevStars) => {
-      const value = parseInt(stop, 10);
+      const value = parseInt(star, 10);
       if (isChecked) {
         return prevStars.includes(value) ? prevStars : [...prevStars, value];
       } else {
@@ -48,7 +48,7 @@ export const StaysProvider = ({ children }) => {
   return (
     <StaysContext.Provider
       value={{
-        allStays,
+        stays,
         loading,
         error,
         updateHotelStars,

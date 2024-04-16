@@ -5,7 +5,7 @@ import FilterForm from "../components/forms/FilterForm";
 import FilterSideBar from "../components/forms/FilterSideBar";
 import { StaysProvider } from "../context/StaysContext";
 import Layout from "./../components/UI/Layout";
-
+import SideBarStays from "../components/forms/SideBarStays";
 const Stays = () => {
   return (
     <Layout>
@@ -14,7 +14,7 @@ const Stays = () => {
           navigationContent={<PageNavContent />}
           filterContent={<></>}
           mainContent={<StaysList />}
-          sidebarContent={<></>}
+          sidebarContent={<SideBarStays />}
         />
       </StaysProvider>
     </Layout>

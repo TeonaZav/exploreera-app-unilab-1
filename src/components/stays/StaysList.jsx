@@ -5,7 +5,7 @@ import StaysListItem from "./StaysLIstItem";
 import { useStays } from "../../context/StaysContext";
 
 const StaysList = () => {
-  const {  allStays, loading, error } = useStays();
+  const {  stays, loading, error } = useStays();
 
   if (loading) return <p>Loading...</p>;
 
@@ -17,8 +17,8 @@ const StaysList = () => {
   return (
     <>
       <StyledList>
-        {allStays.length > 0 ? (
-          allStays.map((stay) => <StaysListItem key={stay.id} {...stay} />)
+        {stays.length > 0 ? (
+          stays.map((stay) => <StaysListItem key={stay.id} {...stay} />)
         ) : (
           <StyledErrorMessage>
             {error || "No flights available for the selected date."}

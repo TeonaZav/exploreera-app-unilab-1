@@ -1,8 +1,11 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+
 import Button from "./../UI/Button";
 import RatingStars from "./RatingStars";
 
 const StaysListItem = ({
+  id,
   name,
   location,
   rating,
@@ -12,31 +15,33 @@ const StaysListItem = ({
   images,
 }) => {
   return (
-    <StyledStay>
-      <StyledFigure>
-        <img src={images[0]} alt={name} />
-      </StyledFigure>
-      <StylefInfoContainer>
-        <StyledInfo>
-          <StyledInfo1>
-            <h3>{name}</h3>
-            <span className="address">
-              {location.city}, {location.country}
-            </span>
-            <p>{location.address}</p>
-            <p>{description}</p>
-          </StyledInfo1>
-          <StyledInfo2>
-            <p>Rating:</p>
-            <RatingStars rating={rating} />
-            <p>
-              Price: <span className="price">{price}$</span>
-            </p>
-          </StyledInfo2>
-        </StyledInfo>
-        <Button>Show details</Button>
-      </StylefInfoContainer>
-    </StyledStay>
+    <NavLink to={`/stay/${id}`}>
+      <StyledStay>
+        <StyledFigure>
+          <img src={images[0]} alt={name} />
+        </StyledFigure>
+        <StylefInfoContainer>
+          <StyledInfo>
+            <StyledInfo1>
+              <h3>{name}</h3>
+              <span className="address">
+                {location.city}, {location.country}
+              </span>
+              <p>{location.address}</p>
+              <p>{description}</p>
+            </StyledInfo1>
+            <StyledInfo2>
+              <p>Rating:</p>
+              <RatingStars rating={rating} />
+              <p>
+                Price: <span className="price">{price}$</span>
+              </p>
+            </StyledInfo2>
+          </StyledInfo>
+          <Button>Show details</Button>
+        </StylefInfoContainer>
+      </StyledStay>
+    </NavLink>
   );
 };
 

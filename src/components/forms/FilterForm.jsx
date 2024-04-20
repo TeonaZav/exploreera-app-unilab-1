@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
+
 import styled from "styled-components";
 
-import toast, { Toaster } from "react-hot-toast";
 import Button from "./../UI/Button";
 import SelectField from "./../forms/SelectField";
-import { dateUpValidationSchema } from "./auth/Schema";
 import { useFlights } from "../../context/FlightContext";
 
 const FilterForm = () => {

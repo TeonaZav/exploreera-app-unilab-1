@@ -40,7 +40,6 @@ function SelectField() {
 const SelectStyle = styled.div`
   width: 100%;
 
-
   -webkit-box-shadow: none;
 
   .react-select__control {
@@ -49,7 +48,6 @@ const SelectStyle = styled.div`
     font-size: 2rem;
     font-weight: 400;
     border-radius: 1.2rem;
-
     border: 1px solid #ff6700;
     background-color: #ffffff;
     color: #424244;
@@ -57,7 +55,6 @@ const SelectStyle = styled.div`
 
     @media (min-width: 50em) {
       border-radius: 2rem;
-      padding: 1.2rem 3rem;
     }
   }
 
@@ -66,7 +63,6 @@ const SelectStyle = styled.div`
   }
 
   .react-select__option {
-    padding: 1.5rem;
     border-bottom: 1px solid #42424452;
     cursor: pointer;
     color: #424244;

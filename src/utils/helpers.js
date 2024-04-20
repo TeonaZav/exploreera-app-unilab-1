@@ -6,6 +6,10 @@ export const getFullTime = (dateTimeStr) => {
   return timeStr;
 };
 
+export const calculateDateDifference = (day1, day2) => {
+  return (day2 - day1) / (1000 * 3600 * 24);
+};
+
 export const base64Image = (file, callback) => {
   const reader = new FileReader();
   reader.onload = function (e) {

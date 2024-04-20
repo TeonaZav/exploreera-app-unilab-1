@@ -18,8 +18,8 @@ const SideBarStays = () => {
           <h4>Property rating</h4>
         </StyledCeckboxHeader>
         <StyledCheckBox>
-          {[1, 2, 3, 4, 5].map((star) => (
-            <div className="checkbox-field">
+          {[1, 2, 3, 4, 5].map((star, index) => (
+            <div className="checkbox-field" key={index}>
               <input type="checkbox" value={star} onChange={handleStarChange} />
               <label key={star}> {star} Star</label>
             </div>

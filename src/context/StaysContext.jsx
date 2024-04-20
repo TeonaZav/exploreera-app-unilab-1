@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-
+import { calculateDateDifference } from "../utils/helpers";
 const StaysContext = createContext();
 
 export const StaysProvider = ({ children }) => {
@@ -7,12 +7,14 @@ export const StaysProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedStars, setSelectedStars] = useState([]);
+  const [selectedStay, setSelectedStay] = useState(null);
+  const [dateRange, setDateRange] = useState([null, null]);
+  const [stayDays, setStayDays] = useState(0);
 
   const fetchStays = async () => {
     try {
-      const res = await fetch("./data/stays.json");
+      const res = await fetch("/data/stays.json");
       const data = await res.json();
-      console.log(data);
       setAllStays(data);
       setError(null);
     } catch (error) {
@@ -20,6 +22,27 @@ export const StaysProvider = ({ children }) => {
       setError("Failed to load stays");
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchStayById = async (id) => {
+    try {
+      const res = await fetch("/data/stays.json");
+      const data = await res.json();
+
+      const stay = data.find((stay) => stay.id === +id);
+      console.log(stay);
+      if (!stay) {
+        setError("No stay found");
+        setSelectedStay(null);
+      } else {
+        console.log(stay);
+        setSelectedStay(stay);
+        setError(null);
+      }
+    } catch (error) {
+      setError("Failed to load stay");
+      setSelectedStay(null);
     }
   };
 
@@ -38,6 +61,14 @@ export const StaysProvider = ({ children }) => {
     });
   };
 
+  const handleDateChange = (dates) => {
+    setDateRange(dates);
+  };
+
+  const handleDuration = (day1, day2) => {
+    setStayDays(calculateDateDifference(day1, day2));
+  };
+
   const stays = allStays.filter((stay) => {
     const starsMatch =
       selectedStars.length > 0 ? selectedStars.includes(stay.rating) : true;
@@ -52,6 +83,12 @@ export const StaysProvider = ({ children }) => {
         loading,
         error,
         updateHotelStars,
+        fetchStayById,
+        handleDuration,
+        stayDays,
+        dateRange,
+        handleDateChange,
+        selectedStay
       }}
     >
       {children}
